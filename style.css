@@ -464,6 +464,65 @@
     .cur-ring{
         display:none;
     }
+    
+}
+/* =========================
+   MOBILE SPACING FIX
+========================= */
+
+@media (max-width:768px){
+
+  .about,
+  .skills,
+  .experience,
+  .projects,
+  .contact{
+      padding: 4.5rem 0;
+  }
+
+  .sec-head{
+      margin-bottom: 2rem;
+  }
+
+  .hero{
+      padding: 6rem 0 3rem;
+  }
+
+  .hero-stats{
+      margin-top: 2rem;
+  }
+}
+
+@media (max-width:576px){
+
+  .about,
+  .skills,
+  .experience,
+  .projects,
+  .contact{
+      padding: 3.5rem 0;
+  }
+
+  .sec-head{
+      margin-bottom: 1.5rem;
+  }
+
+  .hero{
+      padding: 5rem 0 2rem;
+  }
+
+  .contact{
+      padding-bottom: 2.5rem;
+  }
+
+  .timeline .tl-item{
+      padding-bottom: 2rem;
+  }
+
+  .contact-grid,
+  .about-grid{
+      gap: 2rem;
+  }
 }
 
 @media (max-width:576px){
