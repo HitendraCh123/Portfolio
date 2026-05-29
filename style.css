@@ -491,6 +491,9 @@
   .hero-stats{
       margin-top: 2rem;
   }
+  .tl-item::before {
+    left: 0.5px;
+  }
 }
 
 @media (max-width:576px){
