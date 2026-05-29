@@ -293,16 +293,282 @@
     ::-webkit-scrollbar-thumb { background: var(--accent); }
 
     /* RESPONSIVE */
-    @media (max-width:992px) {
-      .about-grid, .contact-grid { grid-template-columns:1fr; gap:3rem; }
-      .skills-grid { grid-template-columns:1fr 1fr; }
-      .hero-stats { position:static; transform:none; flex-direction:row; margin-top:3rem; gap:3rem; }
-      .stat { text-align:left; }
+/* =========================
+   FULL RESPONSIVE DESIGN
+========================= */
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:center;
+    gap:2rem;
+}
+
+@media (max-width:1200px){
+
+    .container{
+        padding:0 1.5rem;
     }
-    @media (max-width:767px) {
-      .nav-links { display:none; }
-      .skills-grid, .proj-grid { grid-template-columns:1fr; }
-      .proj-card.full { grid-column:auto; grid-template-columns:1fr; }
-      .feat-badge { display:none; }
-      .hero-name { font-size: clamp(3.5rem,15vw,5rem); }
+
+    .hero-stats{
+        right:20px;
     }
+
+    .hero-glow{
+        width:500px;
+        height:500px;
+    }
+}
+
+@media (max-width:992px){
+
+    .container{
+        padding:0 1.25rem;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:8rem 0 5rem;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-stats{
+        position:static;
+        transform:none;
+        flex-direction:row;
+        flex-wrap:wrap;
+        gap:2rem;
+        margin-top:3rem;
+    }
+
+    .stat{
+        text-align:left;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:3rem;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:3rem;
+    }
+
+    .skills-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .proj-card.full{
+        grid-template-columns:1fr;
+    }
+
+    .hero-desc{
+        max-width:100%;
+    }
+
+    .tl-company{
+        font-size:1.7rem;
+    }
+}
+
+@media (max-width:768px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-badge{
+        display:none;
+    }
+
+    .container{
+        padding:0 1rem;
+    }
+
+    .hero-name{
+        font-size:clamp(3rem,14vw,5rem);
+    }
+
+    .hero-role{
+        font-size:.9rem;
+    }
+
+    .hero-desc{
+        font-size:.9rem;
+        line-height:1.8;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    .proj-grid{
+        grid-template-columns:1fr;
+    }
+
+    .proj-card{
+        padding:1.5rem;
+    }
+
+    .proj-card.full{
+        grid-column:auto;
+    }
+
+    .feat-badge{
+        display:none;
+    }
+
+    .timeline::before{
+        left:6px;
+    }
+
+    .tl-item{
+        padding-left:2rem;
+    }
+
+    .tl-company{
+        font-size:1.4rem;
+    }
+
+    .sec-title{
+        font-size:2.5rem;
+    }
+
+    .footer-i{
+        flex-direction:column;
+        gap:.75rem;
+        text-align:center;
+    }
+
+    .hero-stats{
+        gap:1.5rem;
+    }
+
+    .stat-n{
+        font-size:2.5rem;
+    }
+
+    .contact-links{
+        width:100%;
+    }
+
+    .c-link{
+        width:100%;
+    }
+
+    .cur,
+    .cur-ring{
+        display:none;
+    }
+}
+
+@media (max-width:576px){
+
+    .hero{
+        padding-top:7rem;
+    }
+
+    .hero-name{
+        font-size:2.8rem;
+        line-height:1;
+    }
+
+    .hero-eyebrow{
+        font-size:.65rem;
+        letter-spacing:.12em;
+    }
+
+    .hero-role{
+        font-size:.85rem;
+    }
+
+    .sec-title{
+        font-size:2rem;
+        line-height:1.1;
+    }
+
+    .hero-cta{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .btn-p,
+    .btn-g{
+        width:100%;
+        justify-content:center;
+    }
+
+    .hero-stats{
+        flex-direction:column;
+        gap:1rem;
+    }
+
+    .stat{
+        width:100%;
+    }
+
+    .stat-n{
+        font-size:2rem;
+    }
+
+    .hl-card,
+    .proj-card,
+    .sk-group,
+    .info-row{
+        padding:1rem;
+    }
+
+    .tl-item{
+        padding-left:1.7rem;
+    }
+
+    .tl-company{
+        font-size:1.2rem;
+    }
+
+    .tl-bullets li{
+        font-size:.85rem;
+    }
+
+    .proj-name{
+        font-size:1.2rem;
+    }
+
+    .proj-desc{
+        font-size:.85rem;
+    }
+
+    .c-link{
+        font-size:.72rem;
+        word-break:break-word;
+    }
+
+    .foot-t{
+        font-size:.65rem;
+    }
+}
+
+@media (max-width:400px){
+
+    .hero-name{
+        font-size:2.3rem;
+    }
+
+    .sec-title{
+        font-size:1.8rem;
+    }
+
+    .hero-eyebrow{
+        font-size:.6rem;
+    }
+
+    .btn-p,
+    .btn-g{
+        padding:.8rem 1rem;
+        font-size:.75rem;
+    }
+}
